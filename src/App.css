@@ -1,39 +1,151 @@
-.App {
-  text-align: center;
+.main {
+  overflow-y: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sideBar {
+  height: 100vh;
+  overflow-y: scroll;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.sideBar::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.sideBar::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.sideBar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(110, 110, 110, 0.3), rgba(65, 65, 66, 0.3));
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.sideBarItem {
+  height: 65px;
+  margin: 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  vertical-align: middle;
+}
+
+.sideBarItem>p {
+  font-size: 1.5rem;
+}
+
+.bg {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.sideBarItem:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+  border: 0;
+}
+
+.sideBarItem::after {
+  display: block;
+  content: '';
+  margin: auto;
+  width: 0;
+  height: 2px;
+  /* color: black; */
+  background-color: black;
+  transition: width 0.3s;
+}
+
+.sideBarItem:hover::after {
+  width: 100%;
+}
+
+.newNoteTextArea {
+  width: 100%;
+  border: 0;
+  height: 90vh;
+  font-size: larger;
+  resize: none;
+  outline: none;
+}
+
+.mainContent {
+  width: 100%;
+  height: 90vh;
+}
+
+.pMainContent {
+  font-size: larger;
+}
+
+.header {
+  height: 70px;
+}
+
+.mainMainContent {
+  height: 100vh;
+}
+
+.buttonMainPage{
+  width: 25%;
+  padding: 5px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  background-color: inherit;
+  transition: all 0.3s;
+}
+
+.buttonMainPage:hover{
+  background-color: rgb(80, 80, 80);
+  border: 2px solid rgb(80, 80, 80);
+  color: white;
+  transition: all 0.3s;
+}
+
+.mainPageContainer{
+  margin: 0 auto; 
+}
+
+.nameChanger{
+  z-index: 20;
+  position: relative;
+  margin: 0 auto;
+}
+
+.itemBlock{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  z-index: 10;
+}
+
+.folderItem{
+  padding: 0 ;
+  width: 300px;
+  height: 155px;
+  border: 2px solid rgba(90, 90, 90, 0.5);
+  box-shadow: 4px 15px 5px;
+  transition: 0.5s;
+}
+
+.folderItem:hover{
+  box-shadow: 1px 5px 10px;
+  transition: 0.5s;
+}
+
+.buttonMain{
+  padding: 5px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  background-color: inherit;
+  transition: all 0.3s;
+}
+
+.buttonMain:hover{
+  background-color: rgb(80, 80, 80);
+  border: 2px solid rgb(80, 80, 80);
+  color: white;
+  transition: all 0.3s;
+}
+
+.itemsContainer{
+  margin: 0 auto;
 }
